@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_training/widgets/form_input_app.dart';
+
+
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -51,71 +54,7 @@ class LoginView extends StatelessWidget {
             const SizedBox(
               height: 18,
             ),
-            const Text(
-              "Phone",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            TextField(
-              cursorHeight: 15,
-              style: const TextStyle(fontSize: 15),
-              decoration: InputDecoration(
-                suffixIcon: const Icon(Icons.phone_enabled),
-                fillColor: const Color.fromARGB(255, 240, 241, 243),
-                filled: true,
-                hintText: "Enter your phone",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              "Password",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            TextField(
-              cursorHeight: 15,
-              style: const TextStyle(fontSize: 15),
-              decoration: InputDecoration(
-                fillColor: const Color.fromARGB(255, 240, 241, 243),
-                filled: true,
-                suffixIcon: IconButton(
-                  icon: const Icon(
-                    Icons.visibility,
-                  ),
-                  onPressed: () {},
-                ),
-                hintText: "Enter your Password",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 3,
-            ),
-            const Text(
-              "Forget Password?",
-              style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
-              textAlign: TextAlign.end,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            FilledButton(
-                onPressed: () {},
-                child: const Text(
-                  "Login",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-                )),
+            const FormInputApp(),
             const SizedBox(
               height: 10,
             ),
@@ -223,6 +162,7 @@ class LoginView extends StatelessWidget {
           ],
         ),
       ),
+  
     );
   }
 }
